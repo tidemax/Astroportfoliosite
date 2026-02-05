@@ -1,0 +1,45 @@
+---
+import Layout from '../components/Layout.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+
+const meta = {
+  title: 'About — Galang Adi Saputra',
+  description: 'About Galang Adi Saputra — visual & product designer.'
+};
+
+const pdfPath = '/galang-adi-saputra-cv.pdf';
+
+const social = {
+  linkedin: 'https://linkedin.com/in/galangadhisaputra',
+  behance: 'https://www.behance.net/galangadhi',
+  instagram: 'https://instagram.com/galangadhi_',
+  linktree: 'https://linktr.ee/galangadhi',
+  bento: 'https://bento.me/galangadhi',
+  email: 'galangadhi47@gmail.com',
+  website: ''
+};
+---
+
+<Layout title={meta.title} description={meta.description}>
+  <section class="section">
+    <h1>About — Galang Adi Saputra</h1>
+
+    <p>
+      I'm a visual & product designer focusing on slide templates, infographics, and visual asset packs.
+      I create ready-to-use design systems and assets for creators and teams.
+    </p>
+
+    <p>
+      I like to keep designs minimal, flexible, and easy to customize. I also provide premium templates
+      and assets on marketplaces and portfolio platforms linked below.
+    </p>
+
+    <div style="margin:20px 0;display:flex;gap:12px;flex-wrap:wrap;">
+      <a class="cta-primary" href={pdfPath} download>Download CV (PDF)</a>
+      <a class="cta-ghost" href="/cv">Open CV (viewer)</a>
+      <a class="cta-ghost" href="/">Back home</a>
+    </div>
+
+    <SocialIcons links={social} />
+  </section>
+</Layout>
